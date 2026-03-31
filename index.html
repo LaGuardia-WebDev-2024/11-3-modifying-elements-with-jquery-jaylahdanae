@@ -9,16 +9,36 @@
     <h1>The Caterpillar</h1>
 
     <p>This is a <strong>caterpillar</strong> in its natural habitat:</p>
+
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Monarch_caterpillar_on_swan_plant_branchlet.jpg/960px-Monarch_caterpillar_on_swan_plant_branchlet.jpg?_=20080909013513"
       width="400"
     />
+<script src="https://googleapis.com"></script>
+<button id="fadeInBtn">Fade In Image</button>
+<button id="fadeOutBtn">Fade Out Image</button>
+<!-- Initially hide the image using CSS for a smooth effect -->
+<img id="myImage" src="your_image_source.jpg" alt="Description" style="display: none;">
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+$("h1").text(" A butterfly")
+$("strong").text("butterfly")
+$("p").html("This is a <strong>butterfly</strong> in its natural habitat.")
+$("img").attr("src","https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/s/h/shutterstock_1512536354.jpg?crop=0%2C317%2C2664%2C1465&wid=1300&hei=715&scl=2.0492307692307694")
+$("strong").css("background-color","white")
+$(document).ready(function(){
+  $("#fadeInBtn").click(function(){
+    $("#myImage").fadeIn(1500); // Fades in over 1.5 seconds
+  });
+
+  $("#fadeOutBtn").click(function(){
+    $("#myImage").fadeOut("slow"); // Fades out with "slow" speed (600ms)
+  });
+});
 
 
-      
     </script>
   </body>
 </html>
